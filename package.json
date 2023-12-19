@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "A MERN stack website that serves as a centralized platform for residents to effortlessly submit requests for garbage collection from their homes",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/devkumar27/Trash-Tracker/issues"
   },
-  "homepage": "https://github.com/devkumar27/Trash-Tracker#readme"
+  "homepage": "https://github.com/devkumar27/Trash-Tracker#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3"
+  }
 }
