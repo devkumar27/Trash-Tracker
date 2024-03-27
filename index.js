@@ -1,10 +1,11 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
+import express from "express";
+import mongoose from "mongoose";
+import cors from "cors";
 const app = express();
-require("dotenv").config();
-const cookieParser = require("cookie-parser");
-const authRoute = require("./Routes/AuthRoute");
+import 'dotenv/config';
+import cookieParser from "cookie-parser";
+import authRoute from "./Routes/AuthRoute.js";
+import complaintRoute from "./Routes/ComplaintRoute.js";
 // const { MONGO_URL, PORT } = process.env;
 
 mongoose.connect(process.env.DB_URI, {
@@ -28,3 +29,4 @@ app.use(cookieParser());
 app.use(express.json());
 
 app.use("/", authRoute);
+app.use("/request", complaintRoute)
