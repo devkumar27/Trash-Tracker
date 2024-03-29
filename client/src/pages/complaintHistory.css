@@ -1,0 +1,74 @@
+/* complaintHistory.css */
+
+.page-heading {
+    color: green;
+    /* Apply green text color */
+    text-align: center;
+    /* Center align the text */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.not-found-div {
+
+    text-align: center;
+    /* Center the text horizontally */
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th,
+.table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.table-item {
+    transition: background-color 0.3s ease;
+}
+
+.table-item:hover {
+    background-color: #f9f9f9;
+}
+
+/* Define brownish text color */
+.brown-text {
+    color: #8b4513;
+    /* Use brownish color */
+}
+
+/* Define blue text color */
+.blue-text {
+    color: #007bff;
+    /* Use blue color */
+}
+
+.status {
+    padding: 6px 10px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.status.green {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.status.yellow {
+    background-color: #ffc107;
+    color: #333;
+}

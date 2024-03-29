@@ -1,147 +1,319 @@
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  padding: 0;
+/* Apply general styles */
+body {
   margin: 0;
-}
-
-label {
-  font-size: 1.2rem;
-  color: #656262;
-}
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(143, 187, 204, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  /* Set background color to white */
+  color: #333;
+  /* Set default text color to dark gray */
 }
 
 .form_container {
-  background-color: #fff;
-  padding: 2rem 3rem;
-  border-radius: 0.5rem;
-  width: 100%;
   max-width: 400px;
-  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #fff;
+  /* Set background color for form container */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Add shadow effect */
 }
 
-.form_container > h2 {
-  margin-block: 1rem;
-  padding-block: 0.6rem;
-  color: rgba(0, 212, 255, 1);
+.form_container h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.form_container > form {
+form {
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
 }
 
-.form_container div {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
+label {
+  margin-bottom: 8px;
 }
 
-.form_container input {
-  border: none;
-  padding: 0.5rem;
-  border-bottom: 1px solid gray;
-  font-size: 1.1rem;
-  outline: none;
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  /* Set input width to 100% */
+  box-sizing: border-box;
+  /* Include padding and border in the width calculation */
 }
 
-.form_container input::placeholder {
-  font-size: 0.9rem;
-  font-style: italic;
-}
-
-.form_container button {
-  background-color: rgba(0, 212, 255, 1);
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  /* Set button background color */
   color: #fff;
+  /* Set button text color */
   border: none;
-  padding: 0.6rem;
-  font-size: 1rem;
+  border-radius: 5px;
   cursor: pointer;
-  border-radius: 0.3rem;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+  /* Darken button color on hover */
+}
+
+span {
+  margin-top: 10px;
+  text-align: center;
 }
 
 span a {
+  color: #4caf50;
+  /* Set link color */
   text-decoration: none;
-  color: rgba(0, 212, 255, 1);
 }
 
 .home_page {
-  height: 100vh;
-  width: 100vw;
-  background: white;
-  color: black;
-  display: flex;
-  /* justify-content: center;
-  align-items: center; */
-  text-transform: uppercase;
-  font-size: 3rem;
-  flex-direction: column;
-  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.home_page span {
-  color: rgba(0, 212, 255, 1);
-}
+/* the commented navbar styling is REDUNDANT at the moment */
 
-/* .home_page button {
-  background-color: rgb(27, 73, 83);
-  color: #fff;
-  cursor: pointer;
-  padding: 1rem 3rem;
-  font-size: 2rem;
-  border-radius: 2rem;
-  transition: ease-in 0.3s;
-  border: none;
-} */
-
-.home_page button:hover {
-  background-color: rgba(0, 212, 255, 1);
-}
-.topnav {
-  background-color: #333;
+/* .topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   overflow: hidden;
+  background-color: transparent;
+  transition: background-color 0.3s;
+  text-align: right; 
+}
+
+.navbar-left {
+  float: left; 
+  padding: 14px 16px; 
+}
+
+.website-name {
+  color: #4caf50; 
+  font-size: 18px; 
+  font-weight: bold; 
+  margin: 0; 
+}
+
+.navbar-right {
+  float: right; 
 }
 
 .topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
+  color: #333; 
   text-decoration: none;
   font-size: 17px;
+  padding: 14px 16px;
+  display: inline-block; 
+  transition: color 0.3s; 
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #000; 
 }
 
-@media only screen and (max-width: 1200px){
-  .home_page{
-    font-size: 1.5rem;
+.topnav a.active {
+  background-color: #4caf50;
+  color: white;
+} */
+
+
+.navbar-brand {
+  color: #4caf50;
+  /* Green color */
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-color: rgb(255, 255, 255);
+}
+
+/* Style the main content sections */
+#home,
+#request,
+#about,
+#contact {
+  padding: 20px;
+  margin-top: 60px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+/* Center align text in sections */
+.w3-center {
+  text-align: center;
+}
+
+/* Add some spacing between section headings and paragraphs */
+.w3-large {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.text-container {
+  flex: 1;
+  padding-right: 20px;
+  /* Adjust spacing between text and image */
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 20px;
+  /* Adjust spacing between text and image */
+}
+
+.image-container img {
+  max-width: 100%;
+  /* Ensure image does not exceed container width */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    /* Stack elements vertically on smaller screens */
   }
-  .home_page button {
-    padding: 0.6rem 1rem;
-    font-size: 1.5rem;
+
+  .text-container,
+  .image-container {
+    width: 100%;
+    padding: 0;
+    /* Remove padding on smaller screens */
   }
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  /* Reverse flex-wrap to change the order of items */
+}
+
+.image-container {
+  flex: 1;
+  padding-right: 20px;
+  /* Adjust spacing between image and text */
+}
+
+.text-container {
+  flex: 1;
+  padding-left: 20px;
+  /* Adjust spacing between image and text */
+}
+
+.image-container img {
+  max-width: 100%;
+  /* Ensure image does not exceed container width */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    /* Stack elements vertically on smaller screens */
+  }
+
+  .text-container,
+  .image-container {
+    width: 100%;
+    padding: 0;
+    /* Remove padding on smaller screens */
+  }
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* Flex-wrap to handle wrapping on smaller screens */
+}
+
+.text-container {
+  flex: 1;
+  padding-right: 20px;
+  /* Adjust spacing between text and image */
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 20px;
+  /* Adjust spacing between text and image */
+}
+
+.image-container img {
+  max-width: 100%;
+  /* Ensure image does not exceed container width */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    /* Stack elements vertically on smaller screens */
+  }
+
+  .text-container,
+  .image-container {
+    width: 100%;
+    padding: 0;
+    /* Remove padding on smaller screens */
+  }
+}
+
+.schedule-button {
+  display: block;
+  margin: 0 auto;
+  /* Center the button */
+  padding: 10px 20px;
+  background-color: #4caf50;
+  /* Green background color */
+  color: #fff;
+  /* White text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  /* Add transition for smooth hover effect */
+  text-decoration: none;
+  /* Remove underline */
+}
+
+.schedule-button:hover {
+  background-color: #45a049;
+  /* Darker green background color on hover */
+}
+
+/* Style the footer */
+footer {
+  background-color: #333;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px;
 }

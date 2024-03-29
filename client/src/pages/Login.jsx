@@ -35,9 +35,11 @@ const Login = () => {
       console.log(data);
       const { success, message } = data;
       if (success) {
+        alert(message)
         navigate("/");
       } else {
-        handleError(message);
+        alert(message)
+        //handleError(message);
       }
     } catch (error) {
       console.log(error);

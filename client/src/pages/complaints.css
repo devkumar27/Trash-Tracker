@@ -1,0 +1,69 @@
+.card {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Adjust height as needed */
+}
+
+form {
+  width: 100%;
+  /* Ensure form takes full width */
+  max-width: 400px;
+  /* Limit form width for readability */
+  padding: 20px;
+  /* Add padding for spacing */
+}
+
+.input-group {
+  margin-bottom: 20px;
+  /* Add margin between input groups */
+}
+
+.input-field {
+  width: 100%;
+  /* Ensure input fields take full width */
+  padding: 10px;
+  /* Add padding for spacing */
+  border-radius: 5px;
+  /* Add border radius for rounded corners */
+  border: 1px solid #ccc;
+  /* Add border for visual clarity */
+  box-sizing: border-box;
+  /* Include padding and border in width calculation */
+}
+
+h2 {
+  color: #4caf50;
+  /* Green color */
+  font-weight: bold;
+  /* Make the text bolder */
+}
+
+p {
+  font-size: 1.1em;
+  /* Increase font size by a little */
+}
+
+.btn {
+  width: 100%;
+  /* Ensure button takes full width */
+  padding: 10px;
+  /* Add padding for spacing */
+  border: none;
+  /* Remove border */
+  border-radius: 5px;
+  /* Add border radius for rounded corners */
+  background-color: #4caf50;
+  /* Green background color */
+  color: #fff;
+  /* White text color */
+  cursor: pointer;
+  /* Change cursor to pointer on hover */
+  transition: background-color 0.3s;
+  /* Add transition for smooth hover effect */
+}
+
+.btn:hover {
+  background-color: #45a049;
+  /* Darker green background color on hover */
+}
