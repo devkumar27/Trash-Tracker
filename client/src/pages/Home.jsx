@@ -38,7 +38,7 @@ const Home = () => {
   return (
     <>
       <div className="home_page">
-      <CustomNavbar onLogout={Logout} />
+        <CustomNavbar onLogout={Logout} />
         {/* <div class="topnav">
           <div className="navbar-left">
             <p className="website-name">Trash-Tracker</p>
@@ -52,7 +52,7 @@ const Home = () => {
             <a href=" " onClick={Logout}>Logout</a>
           </div>
         </div> */}
-        
+
         {/* <Navbar collapseOnSelect expand="lg"
           className="bg-grey">
           <Container>
@@ -85,7 +85,7 @@ const Home = () => {
                     y
                   </NavDropdown.Item> */}
 
-                  {/* <NavDropdown.Divider />
+        {/* <NavDropdown.Divider />
 
                   <NavDropdown.Item href="/request/history">
                     Pickup History
@@ -106,9 +106,9 @@ const Home = () => {
 
         <div id="home" class="home-container">
           <div class="text-container">
-            <h3 class="w3-center">TrashTracker</h3>
-            <p class="w3-center w3-large">trash
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores culpa corrupti nostrum tempora a eius eligendi velit veniam voluptatum incidunt tempore accusantium molestias perferendis, saepe nam ipsa veritatis vitae adipisci. Officiis, labore voluptate?
+            <h3 class="w3-center">TRASHTRACKER</h3>
+            <p class="w3-center w3-large">
+              Welcome to Trash-Tracker, your solution to the pressing challenge of inadequate waste disposal in urban areas. Say goodbye to environmental contamination, health risks, and compromised living standards. Our platform tackles these issues head-on, offering efficient waste management solutions tailored to your needs. Experience the ease of streamlined garbage disposal with features like time slot-based pickups and intuitive waste categorization. Join us in creating cleaner, healthier communities one step at a time.
             </p>
           </div>
           <div class="image-container">
@@ -119,39 +119,38 @@ const Home = () => {
 
         <div id="request">
           <p className="w3-center w3-large">
-            Tired of dealing with garbage? Schedule a pickup hassle-free!
-            Get your trash collected at the perfect time for you.
+            Choose us for seamless doorstep waste collection, transparent processes, and a commitment to sustainability for a cleaner future.
           </p>
           <Link to="/request">
-            <button className="schedule-button">Schedule Now</button>
+            <button className="schedule-button">Request Pickup</button>
           </Link>
         </div>
 
         <div id="about" class="about-container">
           <div class="image-container">
-            <img src="trash.jpg" alt="Image" />
+            <img src="aboutus.jpg" alt="Image" />
           </div>
           <div class="text-container">
-            <h3 class="w3-center">ABOUT THE COMPANY</h3>
-            <p class="w3-center w3-large">Key features of our company
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque delectus repellat odio temporibus, doloribus harum consequuntur cum adipisci. Perspiciatis rerum error distinctio maiores. Soluta et eligendi veniam! Ullam molestiae, facere sapiente fugit officiis omnis aperiam cum placeat, ut quibusdam harum excepturi repellendus eius iste quisquam natus veritatis numquam rem eaque amet enim? Ratione dicta maxime exercitationem quis amet ipsam vitae, fugit aspernatur delectus, nemo maiores aperiam.
+            <h3 class="w3-center">ABOUT US</h3>
+            <p class="w3-center w3-large">
+              Urban regions are contending with the issue of inadequate waste disposal, resulting in environmental contamination, health risks, and a deterioration in living standards. Current waste management systems frequently exhibit inefficiency and struggle to offer residents a smooth process for disposing of their household waste.
+              <br />
+              TrashTracker is dedicated to addressing the challenge of improper garbage disposal in urban areas by offering innovative solutions such as time slot-based garbage pickup and efficient categorization of waste.
             </p>
           </div>
         </div>
 
 
-        <div id="contact" class="contact-container">
-          <div class="text-container">
-            <h3 class="w3-center">Contact Us</h3>
-            <p class="w3-center w3-large">Contact
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto soluta cum, veritatis repellat, nihil laboriosam maiores deserunt earum incidunt dolorum nemo ducimus doloribus tempora dignissimos aliquam libero magni rerum quaerat. Minus eaque dicta assumenda obcaecati rerum nulla possimus sint repellendus fugit! Distinctio numquam corporis ex.
-            </p>
+        <div id="contact" className="contact-container">
+          <div className="text-container">
+            <h3 className="w3-center">CONTACT US</h3>
+            <p className="w3-center w3-large">Phone: +1 (123) 456-7890</p>
+            <p className="w3-center w3-large">Email: contact@trashtracker.com</p>
           </div>
-          <div class="image-container">
+          <div className="image-container">
             <img src="contact.png" alt="Image" />
           </div>
         </div>
-
 
         {/*<footer class="w3-center w3-padding-64">
           <a href="#home" class="w3-button"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a></footer>*/}

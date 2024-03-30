@@ -6,6 +6,10 @@ body {
   /* Set background color to white */
   color: #333;
   /* Set default text color to dark gray */
+
+}
+h3 {
+  color: #45a049;
 }
 
 .form_container {
