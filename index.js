@@ -6,7 +6,7 @@ import 'dotenv/config';
 import cookieParser from "cookie-parser";
 import authRoute from "./Routes/AuthRoute.js";
 import complaintRoute from "./Routes/ComplaintRoute.js";
-// const { MONGO_URL, PORT } = process.env;
+//const { MONGO_URL, PORT } = process.env;
 
 mongoose.connect(process.env.DB_URI, {
   useNewUrlParser: true,

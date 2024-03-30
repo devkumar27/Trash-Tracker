@@ -42,10 +42,12 @@ const Signup = () => {
       );
       const { success, message } = data;
       if (success) {
-        handleSuccess(message);
+        //handleSuccess(message);
+        alert(message)
         navigate("/");
       } else {
-        handleError(message);
+        //handleError(message);
+        alert(message)
       }
     } catch (error) {
       console.log(error);
@@ -75,7 +77,7 @@ const Signup = () => {
           />
         </div>
         <div>
-          <label htmlFor="email">First name</label>
+          <label htmlFor="firstname">First name</label>
           <input
             type="text"
             name="firstname"
@@ -85,7 +87,7 @@ const Signup = () => {
           />
         </div>
         <div>
-          <label htmlFor="email">Last name</label>
+          <label htmlFor="lastname">Last name</label>
           <input
             type="text"
             name="lastname"
@@ -95,7 +97,7 @@ const Signup = () => {
           />
         </div>
         <div>
-          <label htmlFor="email">Address</label>
+          <label htmlFor="address">Address</label>
           <input
             type="text"
             name="address"
