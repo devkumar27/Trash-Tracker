@@ -36,7 +36,7 @@ const ComplaintHistory = () => {
                 <h1 className='page-heading'>Your Pickup Requests History</h1>
                 {zeroComplaints &&
                     <div className='not-found-div'>
-                        <h3>All good! No complaints werefound.</h3>
+                        <h4>All good! No complaints were found.</h4>
                     </div>
                 }
                 {!zeroComplaints &&
