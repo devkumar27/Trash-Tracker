@@ -1,13 +1,13 @@
 import asyncHandler from 'express-async-handler';
 import Complaint from '../Models/complaintModel.js';
 import decodeToken from '../util/decodeToken.js';
-import User from '../Models/userModel.js';
 import 'dotenv/config';
 import Complaints from '../Models/complaintModel.js';
+import Admin from '../Models/adminModel.js';
 
 
 // @desc        File a new complaint
-// @route       POST /api/complaints/
+// @route       POST /request/
 // @access      Public
 const raiseComplaint = asyncHandler(async (req, res) => {
     try {
@@ -58,15 +58,55 @@ const raiseComplaint = asyncHandler(async (req, res) => {
 });
 
 // @desc        Fetch all complaints
-// @route       GET /api/complaints/all
+// @route       GET /request/all
 // @access      Private/Admin
 const allComplaints = asyncHandler(async (req, res) => {
     try {
+        const bearerHeader = req.headers.authorization; 
+        const token = bearerHeader.split(' ')[1];
+        const decoded = decodeToken(token);
+        const caller = decoded.id;
+
+        const isAdmin = await Admin.findOne({ _id: caller })
+        if(!isAdmin) {
+            res.status(403).json({
+                success: false,
+                message: "403 Forbidden! Access Denied!"
+            })
+        }
+
         const complaints = await Complaint.find({ });
-        res.status(200).json(complaints);
+        res.status(200).json(complaints); // gives out an array of objects, each object contains a single complaint
     } catch(err) {
-        res.status(400);
-        console.log('Error retrieving data. Please try again later.')
+        res.status(400).json({ message: 'Error retrieving data. Please try again later.' });
+        console.log("Error in retrieving data");
+    }
+});
+
+// @desc        Update complaint status
+// @route       UPDATE /request/update
+// @access      Private/Admin
+const updateStatus = asyncHandler(async (req, res) => {
+    try {
+        const bearerHeader = req.headers.authorization; 
+        const reqId = req.headers._id;
+        const token = bearerHeader.split(' ')[1];
+        const decoded = decodeToken(token);
+        const caller = decoded.id;
+
+        const isAdmin = await Admin.findOne({ _id: caller })
+        if(!isAdmin) {
+            res.status(403).json({
+                success: false,
+                message: "403 Forbidden! Access Denied!"
+            })
+        }
+
+        const complaints = await Complaint.findOneAndUpdate({ _id: reqId }, { isResolved: true }, { new: true });
+        res.status(200).json(complaints); 
+    } catch(err) {
+        res.status(400).json({ message: 'Error updating data. Please try again later.' });
+        console.log("Error in updation: "+ res);
     }
 });
 
@@ -106,5 +146,6 @@ const complaintHistory = asyncHandler(async (req, res) => {
 export {
     raiseComplaint,
     allComplaints,
-    complaintHistory
+    complaintHistory,
+    updateStatus
 };
