@@ -27,7 +27,6 @@ const Home = () => {
       // const { status, isAdmin } = data;
       // setUsername(user);
       setIsAdmin(data.isAdmin);
-      
       return data.status
         ? console.log("hey")
         : (removeCookie("token"), navigate("/login"));
@@ -45,7 +44,7 @@ const Home = () => {
   };
   return (
     <>
-      
+      {isAdmin ? <h1>Welcome Admin</h1> : 
       <div className="home_page">
         <CustomNavbar onLogout={Logout} />
 
@@ -100,6 +99,7 @@ const Home = () => {
         {/*<footer class="w3-center w3-padding-64">
           <a href="#home" class="w3-button"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a></footer>*/}
       </div> 
+    }
     </>
   );
 };
