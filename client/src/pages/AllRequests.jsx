@@ -5,12 +5,12 @@ import { useCookies } from 'react-cookie';
 import { useNavigate } from 'react-router-dom';
 import AdminNavbar from './adminNav';
 
-const ComplaintHistory = () => {
+const AllRequests = () => {
     const navigate = useNavigate();
+    const [cookies, removeCookie] = useCookies([]);
     const [allRequests, setAllRequests] = useState([]);
     const [zeroComplaints, setZeroComplaints] = useState(false);
     const [currentReq, setCurrentReq] = useState();
-    const [cookies] = useCookies(['token']);
 
     useEffect(() => {
         fetchComplaints();
@@ -65,6 +65,7 @@ const ComplaintHistory = () => {
     // fetchComplaints()
 
     const handleLogout = () => {
+        removeCookie('token');
         navigate("/login");
     };
 
@@ -179,4 +180,4 @@ const ComplaintHistory = () => {
     );
 }
 
-export default ComplaintHistory;
+export default AllRequests;

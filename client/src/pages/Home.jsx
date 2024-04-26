@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useCookies } from "react-cookie";
 import axios from "axios";
 import CustomNavbar from './Navbar';
+import AllRequests from './AllRequests';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -33,18 +34,18 @@ const Home = () => {
     };
     verifyCookie();
   }, [cookies, navigate, removeCookie]);
-  useEffect(()=> {
-    if (isAdmin) {
-      navigate("/request/all");
-    }
-  }, [isAdmin])
+  // useEffect(()=> {
+  //   if (isAdmin) {
+  //     navigate("/request/all");
+  //   }
+  // }, [isAdmin])
   const Logout = () => {
     removeCookie("token");
     navigate("/login");
   };
   return (
     <>
-      {isAdmin ? <h1>Welcome Admin</h1> : 
+      {isAdmin ? <AllRequests /> : 
       <div className="home_page">
         <CustomNavbar onLogout={Logout} />
 

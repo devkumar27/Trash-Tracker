@@ -14,7 +14,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/request" element={<Complaints />} />
         <Route path="/request/history" element={<ComplaintHistory />} />
-        <Route path="/request/all" element={<AllRequests />} />
+        // <Route path="/request/all" element={<AllRequests />} />
       </Routes>
     </div>
   );

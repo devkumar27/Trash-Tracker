@@ -1,15 +1,37 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useCookies } from 'react-cookie';
 import { ToastContainer, toast } from "react-toastify";
 
 const Login = () => {
   const navigate = useNavigate();
+  const [cookies, removeCookie] = useCookies([]);
   const [inputValue, setInputValue] = useState({
     email: "",
     password: "",
   });
   const { email, password } = inputValue;
+
+  // useEffect(() => {
+  //   const verifyCookie = async () => {
+  //     if (!cookies.token) {
+  //       navigate("/login");
+  //     }
+  //     const { data } = await axios.post(
+  //       "http://localhost:4000",
+  //       {},
+  //       { withCredentials: true }
+  //     );
+  //     // const { status, isAdmin } = data;
+  //     // setUsername(user);
+  //     return data.status
+  //       ? navigate('/')
+  //       : (removeCookie("token"), navigate("/login"));
+  //   };
+  //   verifyCookie();
+  // }, [])
+
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setInputValue({
