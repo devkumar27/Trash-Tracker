@@ -33,6 +33,11 @@ const Home = () => {
     };
     verifyCookie();
   }, [cookies, navigate, removeCookie]);
+  useEffect(()=> {
+    if (isAdmin) {
+      navigate("/request/all");
+    }
+  }, [isAdmin])
   const Logout = () => {
     removeCookie("token");
     navigate("/login");
@@ -42,70 +47,6 @@ const Home = () => {
       {isAdmin ? <h1>Welcome Admin</h1> : 
       <div className="home_page">
         <CustomNavbar onLogout={Logout} />
-        {/* <div class="topnav">
-          <div className="navbar-left">
-            <p className="website-name">Trash-Tracker</p>
-          </div>
-          <div className="navbar-right">
-            <a href="#home">Home</a>
-            <a href="/request">Request Pickup</a>
-            <a href="#about">About</a>
-            <a href="/request/history">History</a>
-            <a href="#contact">Contact</a>
-            <a href=" " onClick={Logout}>Logout</a>
-          </div>
-        </div> */}
-
-        {/* <Navbar collapseOnSelect expand="lg"
-          className="bg-grey">
-          <Container>
-            <Navbar.Brand href="/">
-              TrashTracker
-            </Navbar.Brand>
-            <Navbar.Toggle
-              aria-controls="responsive-navbar-nav"
-              className="custom-toggler"
-              style={{ borderColor: 'white' }} //color of hamburger menu icon
-            />
-            <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link href="#home">
-                  Home
-                </Nav.Link>
-                <Nav.Link href="#about">
-                  About
-                </Nav.Link>
-                <NavDropdown title="Garbage Pickup"
-                  id="collapsible-nav-dropdown">
-                  <NavDropdown.Item href="/request">
-                    Schedule Pickup
-                  </NavDropdown.Item>
-
-                  {/* <NavDropdown.Item href="#action/3.2">
-                    x
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
-                    y
-                  </NavDropdown.Item> */}
-
-        {/* <NavDropdown.Divider />
-
-                  <NavDropdown.Item href="/request/history">
-                    Pickup History
-                  </NavDropdown.Item>
-                </NavDropdown>
-              </Nav>
-              <Nav>
-                <Nav.Link href="#contact">
-                  Contact Us
-                </Nav.Link>
-                <Nav.Link href=" " onClick={Logout}>
-                  Logout
-                </Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar> */}
 
         <div id="home" class="home-container">
           <div class="text-container">
