@@ -15,7 +15,7 @@ mongoose.connect(process.env.DB_URI, {
     console.log('Connected!!')
   });
 
-  app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
+  app.use(cors({ credentials: true, origin: 'https://trash-tracker-gb4c.onrender.com' }));
   
   // ... other middleware and route handling
   
