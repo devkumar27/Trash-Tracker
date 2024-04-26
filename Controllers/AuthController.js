@@ -67,8 +67,9 @@ export const Login = async (req, res, next) => {
         const token = createSecretToken(user._id);
         res.cookie("token", token, {
           withCredentials: true,
+          //secure: false,
           httpOnly: true,
-          sameSite: secure ? 'None' : 'Lax',
+          sameSite: 'Lax',
         });
         res.status(201).json({ message: "User logged in successfully", success: true });
       } else if(admin) {
@@ -79,6 +80,7 @@ export const Login = async (req, res, next) => {
         const token = createSecretToken(admin._id);
         res.cookie("token", token, {
           withCredentials: true,
+          secure,
           httpOnly: true,
           sameSite: secure ? 'None' : 'Lax',
         });
