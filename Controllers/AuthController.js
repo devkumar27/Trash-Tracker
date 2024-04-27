@@ -69,7 +69,7 @@ export const Login = async (req, res, next) => {
           withCredentials: true,
           secure: true,
           httpOnly: true,
-          sameSite: 'None',
+          sameSite: 'Strict',
         });
         res.status(201).json({ message: "User logged in successfully", success: true });
       } else if(admin) {
