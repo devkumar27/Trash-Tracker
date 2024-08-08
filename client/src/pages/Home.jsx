@@ -53,7 +53,7 @@ const Home = () => {
           <div class="text-container">
             <h3 class="w3-center">TRASHTRACKER</h3>
             <p class="w3-center w3-large">
-              Welcome to Trash-Tracker, your solution to the pressing challenge of inadequate waste disposal in urban areas. Say goodbye to environmental contamination, health risks, and compromised living standards. Our platform tackles these issues head-on, offering efficient waste management solutions tailored to your needs. Experience the ease of streamlined garbage disposal with features like time slot-based pickups and intuitive waste categorization. Join us in creating cleaner, healthier communities one step at a time.
+              Welcome to your Trash-Tracker, your solution to the pressing challenge of inadequate waste disposal in urban areas. Say goodbye to environmental contamination, health risks, and compromised living standards. Our platform tackles these issues head-on, offering efficient waste management solutions tailored to your needs. Experience the ease of streamlined garbage disposal with features like time slot-based pickups and intuitive waste categorization. Join us in creating cleaner, healthier communities one step at a time.
             </p>
           </div>
           <div class="image-container">
